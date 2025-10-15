@@ -50,3 +50,13 @@ ii) Compare training vs validation errors to check overfitting
 i) Use the best performing model to make predictions on test/unseen data
 
 ii) Possibly wrap the model in an application (web app or API) for users to input features and get sales estimates
+
+DATASET AND FEATURES:-
+
+DATASET OVERVIEW:
+
+1) The dataset comprises historical sales data of various products across multiple outlets (stores).
+2) It contains product-level attributes, store (outlet) attributes, and the sales target variable.
+3) Usually there are two parts: train (with sales) and test (without sales, for which predictions are to be made) datasets.
+4) The dataset has mixed types of variables: numeric (continuous) and categorical.
+5) There can be missing values (especially in weight, outlet size) and special cases (zero visibility) that require cleaning or imputation.
