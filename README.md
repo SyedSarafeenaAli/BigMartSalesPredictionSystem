@@ -60,3 +60,53 @@ DATASET OVERVIEW:
 3) Usually there are two parts: train (with sales) and test (without sales, for which predictions are to be made) datasets.
 4) The dataset has mixed types of variables: numeric (continuous) and categorical.
 5) There can be missing values (especially in weight, outlet size) and special cases (zero visibility) that require cleaning or imputation.
+
+FEATURES DESCRIPTION: 
+
+1) Item_Identifier:
+A unique code or ID for each product (item).
+It helps to distinguish different products, but by itself doesn’t directly tell much unless linked with other product features.
+
+2) Item_Weight:
+The physical weight of the product (in some unit, e.g. kg or grams).
+Heavier or lighter items might sell differently (shipping cost, handling, shelf placement) and sometimes missing values here need to be filled in.
+
+3) Item_Fat_Content:
+Indicates whether the product is “Low Fat,” “Regular,” or similar categories.
+It’s especially relevant when the product is food or consumable. Customer preferences (health consciousness, diet) may affect sales.
+
+4) Item_Visibility:
+How visible the product is in the store, as a fraction or percentage of shelf/display area.
+A higher visibility means more chance that customers notice the product, hence possibly higher sales. But in this dataset, some products have zero visibility (which is unrealistic), so those are treated specially (imputed).
+
+5)Item_Type:
+Category or classification of the product (for example: “Dairy,” “Frozen Foods,” “Soft Drinks,” etc.).
+Helps group similar products—these groups may have similar sales behavior (e.g. perishable vs non-perishable). 
+
+6) Item_MRP:
+Maximum Retail Price of the product (the list price).
+This influences how much customers might pay; generally, price has negative correlation with demand (higher price → fewer sold) but depends on product type and store. 
+
+7) Outlet_Identifier:
+Unique ID/code for the store (outlet).
+Different outlets may have different locations, size, customer base, etc., so knowing which outlet helps to capture those differences.
+
+8) Outlet_Establishment_Year:
+The year when the store/outlet was opened.
+Often transformed into “age of outlet” (current year minus establishment year) to reflect experience, maturity, possibly customer awareness, and stability. Older outlets might have more established customer flow. 
+
+9) Outlet_Size:
+Physical size or capacity of the outlet (e.g. Small, Medium, Large).
+Larger stores may carry more variety, have more shelf space, more visibility, draw more customers. Missing values often exist in this feature and need to be filled. 
+
+10) Outlet_Location_Type:
+Type/category of the city or area in which the outlet is located (for example, Tier-1 urban, Tier-2, or rural).
+Location affects footfall, purchasing power of customers, competition, etc. A store in a densely populated/urban area may have higher sales compared to one in less dense area. 
+
+11) Outlet_Type:
+What kind of outlet/store it is (for example, Supermarket type, Grocery Store, etc.).
+Different business models, product assortments, store layout, pricing strategies etc. influence sales. 
+
+12) Item_Outlet_Sales (Target Variable):
+The actual sales (amount sold) of a particular item in a particular outlet.
+This is what the model aims to predict. In the training data it’s known; in the test data, the model must estimate it.
