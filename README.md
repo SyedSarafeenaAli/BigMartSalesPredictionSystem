@@ -19,34 +19,34 @@ This is essentially a supervised learning regression problem: predict a continuo
 
 1. DATA PREPROCESSING AND CLEANING:
    
-Handle missing values (for weight, store size, etc.)
+i) Handle missing values (for weight, store size, etc.)
 
-Deal with zeros or invalid values (e.g. zero visibility)
+ii) Deal with zeros or invalid values (e.g. zero visibility)
 
-Standardize or unify inconsistent categorical labels (e.g. "LF", "Low Fat", etc.)
+iii) Standardize or unify inconsistent categorical labels (e.g. "LF", "Low Fat", etc.)
 
 2. FEATURE ENGINEERING:
    
-Create derived features (for example, number of years since establishment for a store)
+i) Create derived features (for example, number of years since establishment for a store)
 
-Transform categorical features to numeric form (one-hot encoding, label encoding)
+ii) Transform categorical features to numeric form (one-hot encoding, label encoding)
 
-Possibly interaction terms or aggregation features
+iii) Possibly interaction terms or aggregation features
 
 3. MODEL BUILDING AND SELECTION:
    
-Train multiple regression algorithms (e.g. Linear Regression, Decision Tree, Random Forest, XGBoost)
+i) Train multiple regression algorithms (e.g. Linear Regression, Decision Tree, Random Forest, XGBoost)
 
-Compare their performance using cross-validation
+ii) Compare their performance using cross-validation
 
 4. MODEL EVALUATION:
    
-Use appropriate error metrics (e.g. RMSE, R²) to evaluate model predictions
+i) Use appropriate error metrics (e.g. RMSE, R²) to evaluate model predictions
 
-Compare training vs validation errors to check overfitting
+ii) Compare training vs validation errors to check overfitting
 
 5. PREDICTION AND DEPLOYMENT:
    
-Use the best performing model to make predictions on test/unseen data
+i) Use the best performing model to make predictions on test/unseen data
 
-Possibly wrap the model in an application (web app or API) for users to input features and get sales estimates
+ii) Possibly wrap the model in an application (web app or API) for users to input features and get sales estimates
