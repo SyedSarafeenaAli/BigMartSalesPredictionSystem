@@ -17,24 +17,36 @@ This is essentially a supervised learning regression problem: predict a continuo
 
 # OBJECTIVES:-
 
-1. DATA PREPROCESSING AND CLEANING
+1. DATA PREPROCESSING AND CLEANING:
+   
 Handle missing values (for weight, store size, etc.)
+
 Deal with zeros or invalid values (e.g. zero visibility)
+
 Standardize or unify inconsistent categorical labels (e.g. "LF", "Low Fat", etc.)
 
-2. FEATURE ENGINEERING
+2. FEATURE ENGINEERING:
+   
 Create derived features (for example, number of years since establishment for a store)
+
 Transform categorical features to numeric form (one-hot encoding, label encoding)
+
 Possibly interaction terms or aggregation features
 
-3. MODEL BUILDING AND SELECTION
+3. MODEL BUILDING AND SELECTION:
+   
 Train multiple regression algorithms (e.g. Linear Regression, Decision Tree, Random Forest, XGBoost)
+
 Compare their performance using cross-validation
 
-4. MODEL EVALUATION
+4. MODEL EVALUATION:
+   
 Use appropriate error metrics (e.g. RMSE, R²) to evaluate model predictions
+
 Compare training vs validation errors to check overfitting
 
-5. PREDICTION AND DEPLOYMENT
+5. PREDICTION AND DEPLOYMENT:
+   
 Use the best performing model to make predictions on test/unseen data
+
 Possibly wrap the model in an application (web app or API) for users to input features and get sales estimates
