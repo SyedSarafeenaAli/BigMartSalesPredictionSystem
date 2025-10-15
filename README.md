@@ -51,7 +51,7 @@ i) Use the best performing model to make predictions on test/unseen data
 
 ii) Possibly wrap the model in an application (web app or API) for users to input features and get sales estimates
 
-DATASET AND FEATURES:-
+# DATASET AND FEATURES:-
 
 DATASET OVERVIEW:
 
